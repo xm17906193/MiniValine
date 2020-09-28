@@ -50,12 +50,12 @@ const vcard = function (root, m) {
   } else if (root.mode === 'xCss') {
     let ua = m.get('ua') || ''
     let uaMeta = ''
-    const svgstr = 'https://cdn.jsdelivr.net/gh/MiniValine/svg@master/'
+    //const svgstr = 'https://cdn.jsdelivr.net/gh/MiniValine/svg@master/'
     if (ua && !root.config.closeUA) {
       ua = uaparser(ua)
       try {
         if (ua.browser && ua.browser.name) {
-          uaMeta += '<span class="vsys"><i><embed class="msvg" src="' + svgstr
+          uaMeta += '<span class="vsys"><i class="ic i-'
           const bn = ua.browser.name.toLowerCase()
           if (['samsung browser'].includes(bn)) {
             uaMeta += 'mobile-alt'
@@ -80,17 +80,17 @@ const vcard = function (root, m) {
           } else {
             uaMeta += 'snapchat-ghost'
           }
-          uaMeta += '.svg"/></i>' +
+          uaMeta += '"></i>' +
 			ua.browser.name +
 			' ' +
 			(ua.browser.version ? ua.browser.version : '') +
 			'</span>' +
 			' '
         } else {
-          uaMeta += '<span class="vsys"><i><embed class="msvg" src="' + svgstr + 'stars.svg"/></i>Magical APP</span>'
+          uaMeta += '<span class="vsys"><i class="ic i-stars"></i>Magical APP</span>'
         }
         if (ua.os && ua.os.name) {
-          uaMeta += '<span class="vsys"><i><embed class="msvg" src="' + svgstr
+          uaMeta += '<span class="vsys"><i class="ic i-'
           const on = ua.os.name.toLowerCase()
           if (['mac os', 'ios'].includes(on)) {
             uaMeta += 'apple'
@@ -105,13 +105,13 @@ const vcard = function (root, m) {
           } else {
             uaMeta += 'snapchat-ghost'
           }
-          uaMeta += '.svg"/></i>' +
+          uaMeta += '"></i>' +
 			ua.os.name +
 			' ' +
 			(ua.os.version ? ua.os.version : '') +
 			'</span>'
         } else {
-          uaMeta += '<span class="vsys"><i><embed class="msvg" src="' + svgstr + 'magic.svg"/></i>Magical OS</span>'
+          uaMeta += '<span class="vsys"><i class="ic i-magic"></i>Magical OS</span>'
         }
       } catch (e) {}
     }
@@ -119,7 +119,7 @@ const vcard = function (root, m) {
       try {
         var loc = m.get('log').region.data.location
         if (loc) {
-          uaMeta += '<span class="vsys"><i><embed class="msvg" src="' + svgstr + 'map.svg"/></i>' + loc + '</span>'
+          uaMeta += '<span class="vsys"><i class="ic i-map"></i>' + loc + '</span>'
         }
       } catch (e) {}
     }
