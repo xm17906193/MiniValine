@@ -24,6 +24,7 @@ const smiles = function (root) {
       try { smileWrapper.appendChild(li) } catch (e) {}
       try { smileBar.appendChild(barli) } catch (e) {}
     }
+    root.config.lazyload && root.config.lazyload.observe()
     try {
       root.el.querySelector('.smile-icons > ul > li:nth-child(1)').style.display = 'block'
       var btn = document.querySelectorAll('.smile-bar > ul > li')
