@@ -11,13 +11,13 @@ const smiles = function (root) {
       for (var j = 0; j < smileList[i].length; j++) {
         var img = document.createElement('img')
         img.setAttribute(
-          'src',
+          'data-src',
           `${smileList[i][j]}`
         )
         try { li.appendChild(img) } catch (e) {}
         if (j === 0) {
           img = document.createElement('img')
-          img.setAttribute('src', `${smileList[i][0]}`)
+          img.setAttribute('data-src', `${smileList[i][0]}`)
           try { barli.appendChild(img) } catch (e) {}
         }
       }

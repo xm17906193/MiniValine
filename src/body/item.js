@@ -104,7 +104,7 @@ const item = function (root, m) {
       } catch (e) {}
     }
     const HTML = 
-        `<img class="avatar" src="${gravatarUrl}"/>` +
+        `<img class="avatar" data-src="${gravatarUrl}"/>` +
     '<div class="main">' +
 			'<div class="head" >' +
         `${m.get('link') ? `<a class="name" href="${m.get('link')}" target="_blank" rel="nofollow" >${m.get('nick')}</a>` : `<span class="name">${m.get('nick')}</span>`}` +

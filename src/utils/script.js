@@ -5,9 +5,7 @@ import GetIP from './plugins/GetIP'
 const script = (root, init = false) => {
   if(init) {
     var vendor = []
-    if(!window.POWERMODE) {
-      vendor.push('npm/activate-power-mode@1.0.0/dist/activate-power-mode.min.js')
-    }
+    
     if (!window.autosize) {
       vendor.push('npm/autosize@4.0.2/dist/autosize.min.js')
     }

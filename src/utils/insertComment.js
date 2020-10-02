@@ -20,6 +20,7 @@ const insertComment = (root, body) => {
     const _vcontent = _item.querySelector('.content > .inner')
     expandEvt(_vcontent)
     root.AtEvt(_item)
+    root.config.lazyload && root.config.lazyload.observe()
     return _item
   }
   const expandEvt = (el) => {

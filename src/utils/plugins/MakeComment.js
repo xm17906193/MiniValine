@@ -6,7 +6,7 @@ const MakeComment = (root, o, render) => {
       var m = ls[i].match(/!\(:(.*?\.\w+):\)/)[1]
       const em = root.emoticon[m]
       var R = new RegExp('!\\(:' + m.replace(/\./, '\\.') + ':\\)', 'g')
-      root.C.comment = root.C.comment.replace(R, `<img src="${em}" alt="${m}" class="vemoticon-img">`)
+      root.C.comment = root.C.comment.replace(R, `<img data-src="${em}" alt="${m}" class="emoji">`)
     }
   }
   o.TEXT = root.C.comment
