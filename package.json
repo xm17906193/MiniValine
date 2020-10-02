@@ -63,8 +63,7 @@
     "leancloud-storage": "^4.6.1",
     "snyk": "^1.348.1",
     "source-map": "^0.7.0",
-    "string-format": "^2.0.0",
-    "textarea-caret-position": "^0.1.1"
+    "string-format": "^2.0.0"
   },
   "snyk": false
 }

@@ -27,7 +27,7 @@ function getCaret() {
     var bcr;
     if (el.tagName === 'TEXTAREA' ||
         (el.tagName === 'INPUT' && (el.getAttribute('type') === 'text' || el.getAttribute('type') === 'email'))) {
-        var offset = require('textarea-caret-position')(el, el.selectionEnd);
+        var offset = require('./textarea-caret-position')(el, el.selectionEnd);
         bcr = el.getBoundingClientRect();
         return {
             x: offset.left + bcr.left,
