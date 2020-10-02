@@ -24,8 +24,11 @@ const submitBtnEvt = (root) => {
     const render = (root) => {
       root.C.comment = root.TEXT
       if (root.C.at !== '') {
-        const at = `<a class="at" href='#${root.C.rid}'>${root.C.at}</a>`
-        root.C.comment = at + ' , ' + root.C.comment
+        const at = `<a class="at" href='#${root.C.pid}'>${root.C.at}</a>`
+        if(new RegExp("^<p>").test(root.C.comment))
+          root.C.comment = root.TEXT.replace("<p>", `<p>${at} , `)
+        else 
+          root.C.comment = at + ' , ' + root.C.comment
       }
       // veirfy
       const mailRet = check.mail(root.C.mail)
@@ -96,7 +99,7 @@ const submitBtnEvt = (root) => {
         } else {
           // get children vlist
           const _vlist = root.el.querySelector(`#children-${root.C.rid}`)
-          root.insertComment(commentItem, _vlist, true)
+          root.insertComment(commentItem, _vlist, false)
         }
         submitBtn.removeAttribute('disabled')
         root.submitting.hide()

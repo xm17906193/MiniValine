@@ -110,7 +110,7 @@ const item = function (root, m) {
         `${m.get('link') ? `<a class="name" href="${m.get('link')}" target="_blank" rel="nofollow" >${m.get('nick')}</a>` : `<span class="name">${m.get('nick')}</span>`}` +
         `${gat}${uaMeta}</div>` +
 			`<div class="meta">` + 
-        `<a rid='${m.id}' at='@${m.get('nick')}' class="at" id="at-${m.id}">${root.i18n.reply}</a>` +
+        `<a${m.get('rid')?` rid="${m.get('rid')}"`:` rid="${m.id}"`} at='@${m.get('nick')}' class="at" id="at-${m.id}">${root.i18n.reply}</a>` +
       	`<span class="time">${timeAgo(m.get('createdAt'), root.i18n)}</span>` +
 			'</div>' +
 			`<section class="content" id="comment-${m.id}">` +

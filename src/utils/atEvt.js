@@ -8,18 +8,13 @@ const atEvt = (root) => {
       const rid = _at.getAttribute('rid')
       root.C.rid = rid
       root.C.at = at
+      root.C.pid = _at.getAttribute('id').replace('at-', '')
       root.el.querySelector('.form textarea').placeholder = at
       root.inputs.comment.value = `${root.inputs.comment.value}`
       // move inputs
       const commentEl = item.querySelector(`#comment-${_id}`)
       try { commentEl.appendChild(root.el.querySelector('.form')) } catch (e) {}
       root.el.querySelector('.cancel-reply').removeAttribute('style')
-      // remove comment trigger
-      // if (root.mode === 'DesertsP') {
-      //   root.el.querySelector('.commentTrigger').setAttribute('style', 'display:none')
-      //   root.el.querySelector('.auth-section').removeAttribute('style')
-      //   root.el.querySelector('.veditor').focus()
-      // }
       // focus
       root.inputs.comment.focus()
     })

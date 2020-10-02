@@ -10,6 +10,7 @@ export const C = {
   ip: '',
   comment: '',
   rid: '',
+  pid: '',
   at: '',
   nick: '',
   mail: '',

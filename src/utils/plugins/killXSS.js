@@ -1,9 +1,9 @@
 import getScriptfun from './getScriptfun'
 
-const killXSS = (o, render) => {
+const killXSS = (o, render) => {    
     o.TEXT = filterXSS(o.TEXT, {
         onIgnoreTagAttr(tag, name, value, isWhiteAttr) {
-            if (name === 'class' || name === 'style') {
+            if (name === 'class' || name === 'style' || name === 'data-src') {
                 return `${name}="${filterXSS.escapeAttrValue(value)}"`
             }
         },
