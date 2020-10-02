@@ -27,7 +27,7 @@ const insertComment = (root, body) => {
       el.classList.add('expand')
       el.setAttribute('data-expand', root.i18n.more)
       dom.on('click', el, (e) => {
-        el.setAttribute('class', 'inner')
+        el.setAttribute('class', 'inner md')
       })
     }
   }
