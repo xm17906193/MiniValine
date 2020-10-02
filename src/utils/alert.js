@@ -1,19 +1,19 @@
 import dom from './plugins/dom'
 const alert = (root) => {
-  const mark = root.el.querySelector('.vmark')
+  const mark = root.el.querySelector('.msg')
   root.alert = {
     show (o) {
-      mark.innerHTML = `<div class="valert txt-center"><div class="vtext">${o.text}</div><div class="vbtns"></div></div>`
-      const vbtns = mark.querySelector('.vbtns')
-      const cBtn = `<button class="vcancel vbtn">${(o.ctxt) || root.i18n.cancel}</button>`
-      const oBtn = `<button class="vsure vbtn">${(o.otxt) || root.i18n.continue}</button>`
-      vbtns.innerHTML = `${cBtn}${o.type && oBtn}`
-      mark.querySelector('.vcancel').addEventListener('click', (e) => {
+      mark.innerHTML = `<div class="alert text-center"><div class="text">${o.text}</div><div class="btns"></div></div>`
+      const vbtns = mark.querySelector('.btns')
+      const cBtn = `<button class="cancel button">${(o.ctxt) || root.i18n.cancel}</button>`
+      const oBtn = o.type?`<button class="sure button">${(o.otxt) || root.i18n.continue}</button>`:''
+      vbtns.innerHTML = `${cBtn}${oBtn}`
+      mark.querySelector('.cancel').addEventListener('click', (e) => {
         root.alert.hide()
       })
       mark.setAttribute('style', 'display:block;')
       if (o.type) {
-        const ok = mark.querySelector('.vsure')
+        const ok = mark.querySelector('.sure')
         dom.on('click', ok, (e) => {
           root.alert.hide()
           o.cb && o.cb()

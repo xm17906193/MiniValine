@@ -1,25 +1,23 @@
 const smiles = function (root) {
   var checksmiles = setInterval(function () {
-    if ((typeof root.emoticonList == 'undefined') || (root.emoticonList.length == 0)) return
     clearInterval(checksmiles)
-    const smileWrapper = root.el.querySelector('.vsmile-icons ul')
-    const smileBar = root.el.querySelector('.vsmile-bar ul')
-    const smileList = root.emoticonList || []
+    if ((typeof window.MV.emoticonList == 'undefined') || (window.MV.emoticonList.length == 0)) return
+    const smileWrapper = root.el.querySelector('.smile-icons ul')
+    const smileBar = root.el.querySelector('.smile-bar ul')
+    const smileList = window.MV.emoticonList || []
     for (var i = 0; i < smileList.length; i++) {
       var li = document.createElement('li')
       var barli = document.createElement('li')
       for (var j = 0; j < smileList[i].length; j++) {
         var img = document.createElement('img')
         img.setAttribute(
-          'data-src',
+          'src',
           `${smileList[i][j]}`
         )
-        img.setAttribute('class', 'lazyload')
         try { li.appendChild(img) } catch (e) {}
         if (j === 0) {
           img = document.createElement('img')
           img.setAttribute('src', `${smileList[i][0]}`)
-          img.removeAttribute('class', 'lazyload')
           try { barli.appendChild(img) } catch (e) {}
         }
       }
@@ -27,9 +25,9 @@ const smiles = function (root) {
       try { smileBar.appendChild(barli) } catch (e) {}
     }
     try {
-      root.el.querySelector('.vsmile-icons > ul > li:nth-child(1)').style.display = 'block'
-      var btn = document.querySelectorAll('.vsmile-bar > ul > li')
-      var show = document.querySelectorAll('.vsmile-icons > ul > li')
+      root.el.querySelector('.smile-icons > ul > li:nth-child(1)').style.display = 'block'
+      var btn = document.querySelectorAll('.smile-bar > ul > li')
+      var show = document.querySelectorAll('.smile-icons > ul > li')
       for (var k = 0; k < btn.length; k++) {
       // 把当前按钮的下标保存，按下按钮对应显示下标一致的盒子，其它盒子隐藏
         btn[k].index = k

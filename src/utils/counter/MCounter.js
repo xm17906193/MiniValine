@@ -4,7 +4,7 @@ const MCounterFactory = function (option) {
   root.config = option
   window.MV.MC.util = util
   window.MV.MC.vc = option.vc
-  util.Visitor(util)
+  //util.Visitor(util)
   util.Counter()
 }
 module.exports = MCounterFactory

@@ -1,3 +1,4 @@
+import POWERMODE from './power'
 const el = function (root) {
   const el = Object.prototype.toString.call(root.config.el) === '[object HTMLDivElement]'
     ? root.config.el
@@ -6,8 +7,9 @@ const el = function (root) {
     return
   }
   root.el = el
-  root.el.classList.add('MiniValine')
-  root.el.classList.add('markdown-body')
+  root.el.classList.add('v')
   root.el.innerHTML = root.ele
+  if(root.powerMode)
+    root.el.addEventListener('input', POWERMODE);
 }
 module.exports = el

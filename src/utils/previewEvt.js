@@ -1,8 +1,8 @@
 import MakeComment from './plugins/MakeComment'
 const previewEvt = (root) => {
   root.previewEvt = (root, t = 0) => {
-    const previewBtn = root.el.querySelector('.vpreview-btn')
-    const previewText = root.el.querySelector('.vpreview-text')
+    const previewBtn = root.el.querySelector('.preview')
+    const previewText = root.el.querySelector('.preview-box')
     const veditor = root.el.querySelector('.veditor')
     const render = (previewText) => {
       previewText.innerHTML = previewText.TEXT

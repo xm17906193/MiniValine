@@ -3,7 +3,7 @@ import ajax from './plugins/ajax'
 
 const i18n = (root) => {
   if (!window.MV.i18n) {
-    let s = localStorage && localStorage.getItem('MiniValineI18n')
+    let s = localStorage && localStorage.getItem('_ValineI18n')
     if (s) {
       s = JSON.parse(s)
       if (s.lang == root.lang) {
@@ -25,7 +25,7 @@ const i18n = (root) => {
           root.i18n = data
           window.MV.i18n = root.i18n
           localStorage && localStorage.setItem(
-            'MiniValineI18n',
+            '_ValineI18n',
             JSON.stringify({
               lang: root.lang,
               i18n: root.i18n

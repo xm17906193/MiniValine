@@ -1,7 +1,7 @@
 import dom from './plugins/dom'
 import insertAtCaret from './insertAtCaret'
 const smileEvt = (root) => {
-  const vsmiles = root.el.querySelector('.vsmile-icons')
+  const vsmiles = root.el.querySelector('.smile-icons')
   dom.on('click', vsmiles, (e) => {
     const textField = root.el.querySelector('.veditor')
     const imgSrc = e.target.src

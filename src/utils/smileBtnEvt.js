@@ -1,9 +1,9 @@
 import dom from './plugins/dom'
 const smileBtnEvt = (root) => {
-  const smileBtn = root.el.querySelector('.vemoji-btn')
-  const previewBtn = root.el.querySelector('.vpreview-btn')
-  const previewText = root.el.querySelector('.vpreview-text')
-  const smileicons = root.el.querySelector('.vsmile-body')
+  const smileBtn = root.el.querySelector('.emojis')
+  const previewBtn = root.el.querySelector('.preview')
+  const previewText = root.el.querySelector('.preview-box')
+  const smileicons = root.el.querySelector('.smile-body')
   dom.on('click', smileBtn, (e) => {
     if (previewText.getAttribute('triggered')) {
       previewText.setAttribute('style', 'display:none;')

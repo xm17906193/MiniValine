@@ -1,6 +1,6 @@
 const loading = function (root) {
 // Empty Data
-  const vempty = root.el.querySelector('.vempty')
+  const vempty = root.el.querySelector('.empty')
   root.nodata = {
     show (txt) {
       vempty.innerHTML = txt || root.i18n.noCommentYet
@@ -12,7 +12,7 @@ const loading = function (root) {
   }
   // loading
   const spinner = '<div class="spinner"><div class="r1"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div></div>'
-  const vloading = root.el.querySelector('.vloading')
+  const vloading = root.el.querySelector('.loading')
   vloading.innerHTML = spinner
   root.loading = {
     show () {
@@ -25,7 +25,7 @@ const loading = function (root) {
     }
   }
   // submitting
-  const vsubmitting = root.el.querySelector('.vsubmitting')
+  const vsubmitting = root.el.querySelector('.submitting')
   vsubmitting.innerHTML = spinner
   root.submitting = {
     show () {

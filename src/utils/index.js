@@ -3,14 +3,14 @@ import i18n from './i18n'
 import setAV from './setAV'
 import smile from './smile'
 import script from './script'
-import initStyle from './initStyle'
-import initLibs from './initLibs'
+//import initStyle from './initStyle'
+//import initLibs from './initLibs'
 import uploadImage from './uploadImage'
 import alert from './alert'
 import getCache from './getCache'
 import initCount from './initCount'
 import smileEvt from './smileEvt'
-import startEvt from './startEvt'
+//import startEvt from './startEvt'
 import resetForm from './resetForm'
 import cancelReply from './cancelReply'
 import smileBtnEvt from './smileBtnEvt'
@@ -24,8 +24,9 @@ import parentQuery from './parentQuery'
 import ActivateCode from './ActivateCode'
 import previewEvt from './previewEvt'
 import visitor from './visitor'
-import barrager from './barrager'
+//import barrager from './barrager'
 import cloudFlag from './cloudFlag'
+import widgets from './widgets'
 
 module.exports = {
   Config: Config,
@@ -33,13 +34,13 @@ module.exports = {
   setAV: setAV,
   smile: smile,
   script: script,
-  initStyle: initStyle,
-  initLibs: initLibs,
+  //initStyle: initStyle,
+  //initLibs: initLibs,
   uploadImage: uploadImage,
   alert: alert,
   initCount: initCount,
   smileEvt: smileEvt,
-  startEvt: startEvt,
+  //startEvt: startEvt,
   resetForm: resetForm,
   cancelReply: cancelReply,
   smileBtnEvt: smileBtnEvt,
@@ -53,7 +54,8 @@ module.exports = {
   ActivateCode: ActivateCode,
   previewEvt: previewEvt,
   visitor: visitor,
-  barrager: barrager,
+  //barrager: barrager,
   cloudFlag: cloudFlag,
-  getCache: getCache
+  getCache: getCache,
+  widgets: widgets
 }

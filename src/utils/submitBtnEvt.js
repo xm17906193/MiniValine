@@ -78,11 +78,11 @@ const submitBtnEvt = (root) => {
     } catch (e) {}
     comment.setACL(getAcl())
     comment
-      .save({ log: window.MV })
+      .save()
       .then((commentItem) => {
         localStorage &&
             localStorage.setItem(
-              'MiniValineCache',
+              '_ValineCache',
               JSON.stringify({
                 nick: root.C.nick,
                 link: root.C.link,
@@ -95,18 +95,18 @@ const submitBtnEvt = (root) => {
           root.insertComment(commentItem, null, true)
         } else {
           // get children vlist
-          const _vlist = root.el.querySelector(`#children-list-${root.C.rid}`)
+          const _vlist = root.el.querySelector(`#children-${root.C.rid}`)
           root.insertComment(commentItem, _vlist, true)
         }
         submitBtn.removeAttribute('disabled')
         root.submitting.hide()
         root.nodata.hide()
         root.reset()
-        try {
-          if (window.MV.MC && window.MV.MC.util) {
-            window.MV.MC.util.Visitor()
-          }
-        } catch (e) {}
+        // try {
+        //   if (window.MV.MC && window.MV.MC.util) {
+        //     window.MV.MC.util.Visitor()
+        //   }
+        // } catch (e) {}
       })
       .catch((ex) => {
         root.submitting.hide()

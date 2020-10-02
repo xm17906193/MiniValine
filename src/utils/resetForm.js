@@ -1,7 +1,7 @@
 import getCache from './getCache'
 const resetForm = (root) => {
-  const smileicons = root.el.querySelector('.vsmile-icons')
-  const previewText = root.el.querySelector('.vpreview-text')
+  const smileicons = root.el.querySelector('.smile-icons')
+  const previewText = root.el.querySelector('.preview-box')
   root.reset = () => {
     for (const i in root.mapping) {
       if (root.mapping.hasOwnProperty(i)) {
@@ -14,7 +14,7 @@ const resetForm = (root) => {
     root.C.rid = ''
     root.C.nick = ''
     root.C.at = ''
-    root.el.querySelector('.vinputs-area  textarea').placeholder = ''
+    root.el.querySelector('.form textarea').placeholder = ''
     getCache(root)
     root.previewEvt(root)
     if (smileicons.getAttribute('triggered')) {
@@ -26,12 +26,12 @@ const resetForm = (root) => {
       previewText.removeAttribute('triggered')
     }
     root.el
-      .querySelector('.vcancel-comment-reply')
+      .querySelector('.cancel-reply')
       .setAttribute('style', 'display:none')
     try {
       root.el
-        .querySelector('#vinputs-placeholder')
-        .appendChild(root.el.querySelector('.vinputs-wrap'))
+        .querySelector('#input')
+        .appendChild(root.el.querySelector('.form'))
     } catch (e) {}
   }
 }

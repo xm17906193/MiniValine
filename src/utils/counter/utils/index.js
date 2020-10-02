@@ -1,7 +1,7 @@
 import Counter from './Counter'
-import Visitor from './Visitor'
+//import Visitor from './Visitor'
 
 module.exports = {
-  Visitor: Visitor,
+  //Visitor: Visitor,
   Counter: Counter
 }

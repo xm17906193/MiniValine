@@ -1,6 +1,6 @@
 import { GBUrl } from '../Default'
 const getCache = (root) => {
-  let s = localStorage && localStorage.getItem('MiniValineCache')
+  let s = localStorage && localStorage.getItem('_ValineCache')
   if (s) {
     s = JSON.parse(s)
     const m = ['nick', 'link', 'mail']
@@ -9,10 +9,10 @@ const getCache = (root) => {
       root.el.querySelector(`.v${k}`).value = s[k]
       root.C[k] = s[k]
     }
-    if ((s.mail !== '') && (root.mode === 'DesertsP')) {
-      const el = root.el.querySelector('.visitor_avatar')
-      el.setAttribute('data-src', `${GBUrl + md5(s.mail.toLowerCase().trim())}?size=80&d=robohash`)
-    }
+    // if ((s.mail !== '') && (root.mode === 'DesertsP')) {
+    //   const el = root.el.querySelector('.visitor_avatar')
+    //   el.setAttribute('data-src', `${GBUrl + md5(s.mail.toLowerCase().trim())}?size=80&d=robohash`)
+    // }
   }
 }
 module.exports = getCache

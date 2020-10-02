@@ -3,7 +3,7 @@ import ajax from '../../plugins/ajax'
 const Visitor = (util) => {
   try {
     var o = {}
-    var parser = new uaparser()
+    var parser = new UAParser()
     var testdate = new Date()
     o.time = testdate.getTime()
     o.href = window.location.href

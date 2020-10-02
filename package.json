@@ -3,11 +3,7 @@
   "version": "4.2.2",
   "description": "A simple and minimalist comment system based on Leancloud.",
   "main": "/dist/MiniValine.min.js",
-  "author": {
-    "name": "MHuiG",
-    "url": "https://github.com/MHuiG",
-    "email": "i@mail.com"
-  },
+  "author": "Ruri Shimotsuki",
   "scripts": {
     "test": "webpack",
     "build": "cross-env env_config=build  webpack",
@@ -26,12 +22,12 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MiniValine/MiniValine.git"
+    "url": "git+https://github.com/amehime/MiniValine.git"
   },
   "bugs": {
-    "url": "https://github.com/MiniValine/MiniValine/issues"
+    "url": "https://github.com/amehime/MiniValine/issues"
   },
-  "homepage": "https://github.com/MiniValine/MiniValine#readme",
+  "homepage": "https://github.com/amehime/MiniValine#readme",
   "devDependencies": {
     "@babel/cli": "7.11.6",
     "@babel/core": "7.11.6",
@@ -60,23 +56,15 @@
     "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
-    "autosize": "^4.0.2",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "blueimp-md5": "^2.13.0",
+    "blueimp-md5": "^2.17.0",
     "css-loader": "^4.0.0",
     "fibers": "^5.0.0",
-    "github-markdown-css": "^4.0.0",
-    "highlight.js": "^10.0.0",
-    "jquery": "^3.4.1",
-    "lazysizes": "^5.2.0",
-    "leancloud-storage": "^4.5.3",
-    "marked": "^1.0.0",
-    "sass": "^1.26.3",
+    "leancloud-storage": "^4.6.1",
     "snyk": "^1.348.1",
     "source-map": "^0.7.0",
     "string-format": "^2.0.0",
-    "ua-parser-js": "^0.7.21",
-    "xss": "^1.0.3"
+    "textarea-caret-position": "^0.1.1"
   },
   "snyk": false
 }
