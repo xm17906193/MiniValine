@@ -35,11 +35,19 @@ valine:
   pageSize: 10 # Pagination size
   lang: zh-CN
   visitor: true # Article reading statistic
-  NoRecordIP: fasle # Whether to record the commenter IP
+  NoRecordIP: false # Whether to record the commenter IP
   serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
-  tagMeta: ["主人", "小伙伴", "新朋友"]
-  master: # ['hash of master@email.com', 'hash of master2@email.com']
-  friends: # ['hash of friend1@email.com', 'hash of friend2@email.com'] 
+  tagMeta:
+    - 主人
+    - 小伙伴
+    - 新朋友
+  master:
+    # - hash of master@email.com
+    # - hash of master2@email.com
+  friends:
+    # - hash of friend@email.com
+    # - hash of friend2@email.com
+  powerMode: true
 ```
 
 ## Options
