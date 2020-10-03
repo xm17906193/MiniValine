@@ -19,11 +19,13 @@ const setAV = function (root) {
   }
   serverURLs = root.config.serverURLs || prefix
   try {
-    AV.init({
-      appId: root.config.appId,
-      appKey: root.config.appKey,
-      serverURLs
-    })
+    if(!window.MV.AVInit)
+      AV.init({
+        appId: root.config.appId,
+        appKey: root.config.appKey,
+        serverURLs
+      })
+    window.MV.AVInit = true
   } catch (e) {}
   root.v = AV
 }
