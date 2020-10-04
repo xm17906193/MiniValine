@@ -44,6 +44,9 @@ const smile = (root) => {
         })
       )
     }, 5000)
+  } else {
+    root.emoticonList = window.MV.emoticonList
+    root.emoticon = window.MV.emoticon
   }
 }
 const getSmile = (root, Url) => {
