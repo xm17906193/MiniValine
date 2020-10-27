@@ -74,21 +74,18 @@ const item = function (root, m) {
     var gat = ''
     if ((!root.config.closeFlag) && (!root.config.cloudflag)) {
       try {
-        root.master = root.master.map(i => i.toLowerCase())
-        root.friends = root.friends.map(i => i.toLowerCase())
-        var ism = root.master.includes(m.get('mailMd5').toLowerCase())
-        var isf = root.friends.includes(m.get('mailMd5').toLowerCase())
-        gat = ism
-          ? '<span class="tag master">' +
-        root.tagMeta[0] +
-        '</span>'
-          : isf
-            ? '<span class="tag friend">' +
-			root.tagMeta[1] +
-			'</span>'
-            : '<span class="tag visitor">' +
-			root.tagMeta[2] +
-			'</span>'
+        if(root.tagMeta['visitor'])
+          gat = '<span class="tag visitor">' +
+              root.tagMeta['visitor'] +
+              '</span>'
+        for (var index in root.tagMember) {
+          var item = root.tagMember[index].map(i => i.toLowerCase())
+          
+          if(item.includes(m.get('mailMd5').toLowerCase()) && root.tagMeta[index])
+            gat = '<span class="tag '+index+'">' +
+                    root.tagMeta[index] +
+                    '</span>'
+        }
       } catch (e) {}
     }
     if ((!root.config.closeFlag) && root.config.cloudflag) {
