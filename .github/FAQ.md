@@ -16,13 +16,13 @@ Here I offer an idea:
 
 Since **appid** and **appkey** are required to call the database API:
 
-![](https://cdn.jsdelivr.net/gh/MHuiG/imgbed/data/2020831194318.png)
+![](https://fastly.jsdelivr.net/gh/MHuiG/imgbed/data/2020831194318.png)
 
 However, it is a security risk to write them directly on the front-end page. Therefore, the author directly writes the database API key in cloudflare worker.
 
 Insert a Fake API key into the front page to confusion. [You can try to find AppKey and AppId in my blog source code.](https://blog.mhuig.top/) The figure below shows that it is a Fake Key. 
 
-![](https://cdn.jsdelivr.net/gh/MHuiG/imgbed/data/2020831194331.png)
+![](https://fastly.jsdelivr.net/gh/MHuiG/imgbed/data/2020831194331.png)
 
 We intercept user requests at the edge of the network and judge the validity of the requests. Edge computing is used to dynamically change the request header and replace it with the real API key to forward the request to the back-end database to hide the API key during data interaction.
 
@@ -45,15 +45,15 @@ If `cloudflag` is turned on, the setting of [Visitor Flag Local Options](https:/
 
 Create Class `Roles` and `Users`.
 
-![](https://cdn.jsdelivr.net/gh/MiniValine/MiniValine@master/.github/img/v1.png)
+![](https://fastly.jsdelivr.net/gh/MiniValine/MiniValine@master/.github/img/v1.png)
 
 Create column `name` , `nick` , `color` in `Roles`.
 
-![](https://cdn.jsdelivr.net/gh/MiniValine/MiniValine@master/.github/img/v2.png)
+![](https://fastly.jsdelivr.net/gh/MiniValine/MiniValine@master/.github/img/v2.png)
 
 Create column `emailhash` , `role` in `Users`.
 
-![](https://cdn.jsdelivr.net/gh/MiniValine/MiniValine@master/.github/img/v3.png)
+![](https://fastly.jsdelivr.net/gh/MiniValine/MiniValine@master/.github/img/v3.png)
 
 Notice the correspondence between `name` in `Roles` and `role` in `Users`.
 
@@ -131,14 +131,14 @@ For example:
 
 ### 4.Get CDN link
 
-jsdelivr CDN link : https://cdn.jsdelivr.net/gh/[YourGitHubUsername]/[GitHubRepositoryName]
+jsdelivr CDN link : https://fastly.jsdelivr.net/gh/[YourGitHubUsername]/[GitHubRepositoryName]
 
 Be careful not to have `/` at the end of the URL
 
 For example:
 
 ```
-https://cdn.jsdelivr.net/gh/MiniValine/alus
+https://fastly.jsdelivr.net/gh/MiniValine/alus
 ```
 
 ### 5.Modify MiniValine configuration item `emoticonUrl`
@@ -150,7 +150,7 @@ https://cdn.jsdelivr.net/gh/MiniValine/alus
       appId: 'Your App ID',
       appKey: 'Your Key',
       placeholder: 'Write a Comment',
-      emoticonUrl: ['https://cdn.jsdelivr.net/gh/MiniValine/alus']
+      emoticonUrl: ['https://fastly.jsdelivr.net/gh/MiniValine/alus']
   });
 
 ```
@@ -163,7 +163,7 @@ or
       appId: 'Your App ID',
       appKey: 'Your Key',
       placeholder: 'Write a Comment',
-      emoticonUrl: ['https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@master','https://cdn.jsdelivr.net/npm/alus']
+      emoticonUrl: ['https://fastly.jsdelivr.net/gh/MiniValine/Bilibilis@master','https://fastly.jsdelivr.net/npm/alus']
   });
 
 ```

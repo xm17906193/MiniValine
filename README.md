@@ -1,4 +1,4 @@
-<img src='https://cdn.jsdelivr.net/gh/MiniValine/MiniValine@master/.github/img/minivaline.png' width='120' align="right" />
+<img src='https://fastly.jsdelivr.net/gh/MiniValine/MiniValine@master/.github/img/minivaline.png' width='120' align="right" />
 
 # MiniValine
 
@@ -106,7 +106,7 @@ valine:
 
 - **emoticonUrl** `String Array`
 
-  Default: `['https://cdn.jsdelivr.net/npm/alus@latest','https://cdn.jsdelivr.net/gh/MiniValine/qq@latest','https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest','https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest','https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest','https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest']`
+  Default: `['https://fastly.jsdelivr.net/npm/alus@latest','https://fastly.jsdelivr.net/gh/MiniValine/qq@latest','https://fastly.jsdelivr.net/gh/MiniValine/Bilibilis@latest','https://fastly.jsdelivr.net/gh/MiniValine/tieba@latest','https://fastly.jsdelivr.net/gh/MiniValine/twemoji@latest','https://fastly.jsdelivr.net/gh/MiniValine/weibo@latest']`
   
   Expression Url.
   
